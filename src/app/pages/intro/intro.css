@@ -1,0 +1,109 @@
+
+
+#principal{
+    display: flex;          
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+
+
+    perspective: 800px;
+    transition: all 0.8s ease-in;
+    transform-origin: center;
+
+}
+
+#principal.exit {
+    opacity: 0;
+    transform: translateY(-200px) rotateX(40deg) scale(0.8);
+    filter: blur(1px);
+
+}
+
+#titulo{
+    font-size: 72px;
+}
+
+#botones{
+    display: flex;
+    gap: 3vw;
+    margin-top: 2%;
+}
+
+#texto {
+    background-color: rgb(216, 216, 206);
+    align-self: center;
+    width: 98vw;
+    padding: 1%;
+}
+
+p{
+    font-size: 22px;
+}
+
+
+button{
+    font-size: 17px;
+}
+
+
+/* Botones */
+
+.old-button {
+
+    font-weight: 400;
+    font-style: normal;
+    background: none;
+    border: 2px solid #2f2e2a;
+    padding: 8px 20px;
+    box-shadow: -8px 6px #2f2e2a;
+    transition-property: transform, box-shadow, outline-offset;
+    transition: 100ms ease-in;
+
+
+    transform: rotateZ(-4deg);
+
+
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 4px 3px black;
+        border: 2px solid black;
+        transform: scale(0.99);
+
+        background: rgb(155, 124, 249);
+
+    }
+
+    &:active {
+        box-shadow: 2px 2px rgb(131, 2, 2);
+        transform: scale(0.99);
+    }
+}
+
+.old-button2 {
+
+    font-weight: 400;
+    font-style: normal;
+    background: none;
+    border: 2px solid #2f2e2a;
+    padding: 8px 20px;
+    box-shadow: 8px 6px #2f2e2a;
+    transition-property: transform, box-shadow, outline-offset;
+    transition: 100ms ease-in;
+
+    transform: rotateZ(11deg);
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: -4px 3px black;
+        border: 2px solid black;
+        transform: scale(0.99);
+        background: rgb(219, 211, 4);
+    }
+
+    &:active {
+        box-shadow: 2px 2px rgb(131, 2, 2);
+        transform: scale(0.99);
+    }
+}
