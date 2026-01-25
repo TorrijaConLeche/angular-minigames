@@ -1,0 +1,49 @@
+
+
+#menu-superior{
+  background-color: rgb(231, 243, 8);
+
+  border-radius: 3px;
+  box-shadow: 3px 6px black;
+
+  display: flex;
+  width: 30vw;
+  justify-content: center;
+
+  margin:0 auto;
+
+}
+
+
+
+.menu {
+
+  padding: 0;
+  gap: 1.1rem;
+  display: flex;
+  flex-direction: row;
+
+  list-style: none;
+  font-weight: 1000;
+  font-size: 20px;
+} 
+
+.bracket {
+  margin: 0 -0.6rem; 
+  opacity: 0.7;
+}
+
+/* Active and done games style in the menus */
+.active {
+  font-weight: bold;
+  color: rgb(25, 33, 185);
+}
+
+.menu ul, li:not(.active):not(.bracket){
+  opacity: 0.2;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}

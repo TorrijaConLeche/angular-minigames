@@ -1,0 +1,26 @@
+
+<div id="menu-superior">
+
+
+    <ul class="menu">
+
+        <li class="bracket"> [ </li>
+        @for (step of steps; track step.id) {
+        <li
+        [class.active] = "step.route == currentRoute"
+        [class.done] = "step.completed"
+        >{{ step.id }}</li>
+        }
+
+        <li class="bracket"> ] </li>
+    </ul>
+
+</div>
+
+
+
+
+
+
+
+

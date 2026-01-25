@@ -31,10 +31,14 @@
 }
 
 #texto {
-    background-color: rgb(216, 216, 206);
+    background-color: rgb(236, 236, 236);
     align-self: center;
-    width: 98vw;
+    width: 70vw;
     padding: 1%;
+
+    border-radius: 1%;
+    corner-shape: round;
+
 }
 
 p{
