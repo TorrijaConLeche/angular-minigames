@@ -1,7 +1,46 @@
-<app-game-menu 
-[currentRoute]="currentRoute"
-
->
+<app-game-menu [currentRoute]="currentRoute"></app-game-menu>
 
 
-</app-game-menu>
+
+<div id="principal" class="code-text">
+
+<div id="pestanas">
+
+    <div><p>Games.java</p></div>
+    <div class="pestana-activa"><p>Main.java 🍒</p></div>
+    <div><p>LoveYou.java</p></div>
+
+
+
+</div>
+<div id="contenedor-codigo">
+
+  <pre ngNonBindable><code>
+<span class="comment">// Instrucciones para demostrar que eres mi novia:</span>
+
+<span class="purple-text">public class</span><span class="yellow-text"> Main</span><span class="blue-text"> &#123; </span>
+
+  <span class="purple-text">public static void</span><span class="blue-text"> main</span><span class="green-text">(</span><span class="yellow-text">String</span><span class="blue-text">[]</span><span class="comment"> args</span><span class="green-text">)</span><span class="blue-text"> &#123;</span>
+
+    <span class="yellow-text">Game</span><span class="blue-text">[]</span><span class="red-text"> games</span><span class="blue-text"> = [</span><span class="comment">Game1</span><span class="comment">,</span><span class="comment"> Game2</span><span class="comment">,</span><span class="comment"> GameN</span><span class="blue-text">]</span>
+
+    <span class="purple-text">for</span><span class="green-text">(</span><span class="purple-text">int</span><span class="red-text"> i</span><span class="purple-text"> = </span><span class="orange-text">0</span><span class="comment">;</span> <span class="comment">i</span><span class="purple-text">&lt;</span><span class="red-text">games</span><span class="red-text">.</span><span class="red-text">length</span><span class="green-text">;</span><span class="blue-text"> i</span><span class="purple-text">++</span><span class="green-text">)</span><span class="blue-text"> &#123;</span>
+
+      <span class="red-text">game</span><span class="green-text">.</span><span class="blue-text">complete</span><span class="yellow-text">();</span>
+
+    <span class="blue-text">&#125;</span>
+    <span class="purple-text">if </span><span class="blue-text">(</span><span class="blue-text">allGamesCompleted</span><span class="yellow-text">()<span class="blue-text">)</span></span><span class="blue-text"> &#123;    </span>
+      <span class="blue-text">setWinner</span><span class="yellow-text">(</span><span class="green-text">"Monica"</span><span class="yellow-text">);</span>
+    <span class="blue-text">&#125;</span>
+
+  <span class="blue-text">&#125;</span>
+<span class="blue-text">&#125;</span>
+
+
+</code></pre>
+
+</div>
+</div>
+
+
+<button> Comenzar </button>

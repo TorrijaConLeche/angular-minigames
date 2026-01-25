@@ -1,16 +1,17 @@
 
 
 #menu-superior{
-  background-color: rgb(231, 243, 8);
+  background-color: rgb(241, 225, 0);
 
   border-radius: 3px;
-  box-shadow: 3px 6px black;
+  box-shadow: 6px 6px black;
 
   display: flex;
   width: 30vw;
   justify-content: center;
 
-  margin:0 auto;
+  margin-top: 2%;
+  margin-bottom: 7%;
 
 }
 
@@ -39,7 +40,7 @@
   color: rgb(25, 33, 185);
 }
 
-.menu ul, li:not(.active):not(.bracket){
+.menu ul, li:not(.active):not(.bracket):not(.texto){
   opacity: 0.2;
 }
 
