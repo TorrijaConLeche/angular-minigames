@@ -1,7 +1,6 @@
-import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
-import { Router } from '@angular/router';
-
+import { Component, DestroyRef, inject, signal } from '@angular/core';
 import { GameMenu } from '../../core/game-menu/game-menu';
+import { GameNavigationService } from '../../core/game-navigation-service';
 
 @Component({
   selector: 'app-intro2',
@@ -17,25 +16,28 @@ export class Intro2 {
   // Necessary to clear setInterval 
   private destroyRef = inject(DestroyRef);
 
+  constructor(private navigation: GameNavigationService){
 
-  constructor(private router: Router){
+    this.currentRoute = this.navigation.getCurrentRoute()
 
-    this.currentRoute = this.router.url
     const intervalId = setInterval(() => {
-      if (this.progress() < 100) {
+      if(this.progress() == 100){
+        this.navigation.goToNextPage();
+      } 
+      else if (this.progress() < 100) {
         this.progress.update(v => v - (Math.min(1, v/10)));
       }
     }, 100);
 
-      this.destroyRef.onDestroy(() => {
-    clearInterval(intervalId);
+    this.destroyRef.onDestroy(() => {
+      clearInterval(intervalId);
     });
   }
 
-  
+  // In order to fill the button 
   fill() {
     if (this.progress() < 100) {
-      this.progress.update(value => value + 5);
+      this.progress.update(value => Math.min(100, value + 5));
     }
   }
 

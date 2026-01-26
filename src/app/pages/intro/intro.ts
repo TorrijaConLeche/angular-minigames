@@ -19,7 +19,5 @@ export class Intro {
       setTimeout(() => {
       this.router.navigate(['intro2']);
     }, 800);
-
   }
-
 }

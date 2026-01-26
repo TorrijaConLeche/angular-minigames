@@ -1,0 +1,12 @@
+<app-game-menu [currentRoute]="currentRoute" ></app-game-menu>
+
+
+<div id="board">
+
+    @for (cell of board; track cell.id) {
+
+        <button class="cell" [ngClass]="cell.value" (click)="play(cell.id)">{{ cell.value }} </button>
+
+    }
+
+</div>

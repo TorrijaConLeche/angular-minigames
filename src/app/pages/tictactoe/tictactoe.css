@@ -1,0 +1,22 @@
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1%;
+    background-color: black;
+    height: 50vh;
+
+}
+
+.cell{
+    font-size: 18px;
+    cursor: pointer;
+    border: 0px;
+}
+
+.X {
+    background-color: rgb(250, 163, 163);
+}
+
+.O {
+    background-color: rgb(78, 78, 255);
+}
