@@ -42,6 +42,39 @@
 
 
 
+/* Start button */
+
+.fill-btn {
+  position: relative;
+  width: 220px;
+  height: 50px;
+  background: transparent;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #b5d62f;
+  transition: width 0.3s ease;
+}
+
+.label {
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+
+
+/* false CODE */
+
 .code-text {
   font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;

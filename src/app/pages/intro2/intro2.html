@@ -43,4 +43,8 @@
 </div>
 
 
-<button> Comenzar </button>
+<button class="fill-btn" (click)="fill()">
+  <span class="fill" [style.width.%]="progress()"></span>
+  <span class="label">COMENZAR</span>
+</button>
+
