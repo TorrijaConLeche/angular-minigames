@@ -1,22 +1,32 @@
 #board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 1%;
     background-color: black;
     height: 50vh;
 
 }
 
-.cell{
-    font-size: 18px;
-    cursor: pointer;
+#board button{
+    font-size: 20px;
     border: 0px;
+    min-height: 100%;
+
+}
+
+.cell {
+    cursor: pointer;
+
 }
 
 .X {
     background-color: rgb(250, 163, 163);
+    opacity: 0.95;
 }
 
 .O {
-    background-color: rgb(78, 78, 255);
+    background-color: rgb(134, 134, 244);
+    opacity: 0.95;
 }
+

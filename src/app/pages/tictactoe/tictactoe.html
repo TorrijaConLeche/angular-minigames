@@ -5,8 +5,32 @@
 
     @for (cell of board; track cell.id) {
 
-        <button class="cell" [ngClass]="cell.value" (click)="play(cell.id)">{{ cell.value }} </button>
+        <button [disabled]="cell.value !== ''" [class.cell]="cell.value == ''" [class.O]="cell.value == 'O'" [class.X]="cell.value == 'X'" (click)="play(cell.id)" >{{ cell.value }} </button>
 
     }
 
+
+
 </div>
+
+
+
+@switch (winner) {
+  @case (null) {
+
+    <h1> Current player: {{ currentTurn }} </h1>
+
+  }
+  @case ("draw"){
+        
+    <h1> Es un empate !</h1>
+
+  }
+
+  @default {
+
+    <h1> El ganador es: {{winner}} !</h1>
+
+  }
+}
+
