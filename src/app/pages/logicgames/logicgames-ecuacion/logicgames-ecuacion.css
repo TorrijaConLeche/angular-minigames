@@ -1,0 +1,20 @@
+
+#principal{
+    font-size: 20px;
+    text-align: justify;
+    justify-self: center;
+}
+
+#resultado {
+    display: flex;
+    flex-direction: row;
+    gap: 4%;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    width: 15%;
+    padding: 2% 2%;
+    font-size: 14px;
+}

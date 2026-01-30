@@ -1,0 +1,15 @@
+<app-game-menu [currentRoute]="currentRoute"></app-game-menu>
+
+<p>Ahora deberas superar unos acertijos para poder seguir</p>
+
+<div id="principal-acertijos">
+    <ng-container 
+        *ngComponentOutlet="games[currentLogicGame].comp">
+    </ng-container>
+</div>
+
+
+ @if(games[currentLogicGame].completed){
+    <button (click)="goNext()">NEXT</button>
+} 
+
