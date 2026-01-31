@@ -1,6 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { GameMenu } from '../../core/game-menu/game-menu';
 import { GameNavigationService } from '../../core/game-navigation-service';
+import { GameaiService } from './gameai-service';
 
 @Component({
   selector: 'app-tictactoe',
@@ -20,7 +21,8 @@ export class Tictactoe {
   currentTurn: 'X' | 'O' = 'X'
   winner: 'X' | 'O' | 'draw' | null = null 
 
-  constructor(private navigation: GameNavigationService){
+
+  constructor(private navigation: GameNavigationService, private gameAI: GameaiService){
     this.initializeBoard()
     this.currentRoute = this.navigation.getCurrentRoute()
 
@@ -34,27 +36,52 @@ export class Tictactoe {
 
   play(v: number){
 
-    this.board.forEach(idx => {
-      if (idx.id == v) {
-        idx.value = this.currentTurn
-      }
-    });
+    this.board[v].value = this.currentTurn
 
     let winner = this.checkWinner()
 
     if(winner != null){
       this.winner = winner
-      console.log(winner)
-      
+      this.disableBoard()
+      return
     } else {
 
       if (this.checkDraw()){
         this.winner = 'draw'
+        this.disableBoard()
         return
       }
 
-      this.currentTurn = this.currentTurn === 'X' ? 'O' : 'X'
     }
+
+    this.currentTurn = this.currentTurn === 'X' ? 'O' : 'X'
+
+    // IA plays
+    if(this.currentTurn === 'O'){
+      let move = this.gameAI.getAIMove(this.board, 85) // Diff
+      this.play(move)
+    }
+
+  }
+
+  restartGame(){
+
+    this.board.forEach(c => {
+      c.value = ""
+    });
+
+    this.currentTurn = 'X'
+    this.winner = null
+  }
+
+  disableBoard(){
+
+    this.board.forEach(idx => {
+      if((idx.value == "")){
+        idx.value = "."
+      }
+        
+    });
 
   }
 
@@ -92,9 +119,14 @@ export class Tictactoe {
   }
 
   
+  goNextGame(){
+    this.navigation.goToNextPage()
+    console.log(this.currentRoute)
+  }
+
 }
 
-class Cell {
+export class Cell {
   id: number
   value: string 
   constructor(id: number){

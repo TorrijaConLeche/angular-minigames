@@ -1,12 +1,14 @@
 <app-game-menu [currentRoute]="currentRoute"></app-game-menu>
 
-<p>Ahora deberas superar unos acertijos para poder seguir</p>
+<h4>Ahora deberas superar unos acertijos para poder seguir</h4>
 
 <div id="principal-acertijos">
     <ng-container 
-        *ngComponentOutlet="games[currentLogicGame].comp">
+        [ngComponentOutlet]="games[currentLogicGame].comp"
+        [ngComponentOutletInjector]="myInjector">
     </ng-container>
 </div>
+
 
 
  @if(games[currentLogicGame].completed){

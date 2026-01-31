@@ -9,3 +9,24 @@ body {
   font-family: 'Lora';
   text-align: center;
 }
+
+.basic-btn{
+    padding: 2%;
+    background-color: aliceblue;
+    border: 2px solid black;
+    box-shadow: 3px 3px rgb(21, 139, 31);
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+    font-weight: 600;
+    
+}
+
+.basic-btn:hover{
+    padding: 2%;
+    background-color: aliceblue;
+    border: 2px solid black;
+    box-shadow: 1px 1px rgb(21, 139, 31);
+    cursor: pointer;
+    translate: 2px 2px;
+    transition: 0.1s ease-in-out;
+}

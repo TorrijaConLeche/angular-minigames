@@ -20,8 +20,8 @@ export const GAME_STEPS: GameStep[] = [
   },
     {
     id: 2,
-    title: 'game2',
-    route: '/asda',
+    title: 'Logic Games',
+    route: '/logic-games',
     completed: false
   },
   {

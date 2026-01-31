@@ -16,21 +16,25 @@
 
 
 @switch (winner) {
-  @case (null) {
 
-    <h1> Current player: {{ currentTurn }} </h1>
 
-  }
   @case ("draw"){
         
     <h1> Es un empate !</h1>
+    <button class="basic-btn" (click)="restartGame()"> VOLVER A JUGAR </button>
+  }
+
+  @case ("X") {
+
+    <h2> Enhorabuena, has superado la primera prueba </h2>
+    <button class="basic-btn" (click)="goNextGame()"> SIGUIENTE NIVEL </button>
 
   }
 
-  @default {
-
-    <h1> El ganador es: {{winner}} !</h1>
-
+  @case("O"){
+    <h2> Has perdido </h2>
+    <button class="basic-btn" (click)="restartGame()"> VOLVER A JUGAR </button>
   }
+
 }
 

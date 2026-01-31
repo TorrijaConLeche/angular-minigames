@@ -1,15 +1,23 @@
 <div id="principal">
-
     <p>🍒 + 🍒 = 12 </p>
     <p>🍒 + 🍒 + 🐸/2 = 19</p>
     <p>🐸/🍣 + 🍒 = 34</p>
     <p>🐸*🍒 + 🍌 + 🍣^0 = 84</p>
-
+<hr>
     <div id="resultado">
         <h3> 🍌 = </h3> 
-        <input type="text"/>
+        <input type="text" #inputText/>
     </div>
-
+    
 </div>
+
+@if (status == "wrong") {
+    <p>PERO GLOBITO???!!</p>
+} @else {
+    <p>Vamooooos que es freee!</p>
+}
+
+<button class="basic-btn" (click)="comprobarInput(inputText.value)">COMPROBAR</button>
+
 
 
